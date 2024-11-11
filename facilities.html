@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts - Facilities</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Arrow styling */
+        .toggle-arrow {
+            transition: transform 0.3s ease;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-gray-700 via-gray-500 to-black">
+
+    
+<!-- Header -->
+<header class="bg-black text-white flex justify-between items-center p-4">
+    <div class="mr-auto">
+        <img src="logo.png" alt="DoBu Martial Arts Logo" class="w-16 h-16 lg:w-20 lg:h-20">
+    </div>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex mx-auto">
+        <ul class="flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+            <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+            <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+            <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+            <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+            <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Join Now Button for Desktop -->
+    <div class="hidden lg:block ml-auto">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="lg:hidden hidden bg-black text-white p-4">
+    <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+        <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+        <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+        <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+        <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+        <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+    </ul>
+    <!-- Join Now Button for Mobile -->
+    <div class="mt-4">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+
+<!-- Facilities Section -->
+<section class="bg-white py-12 px-6 md:px-12 lg:px-24 text-center text-gray-800">
+    <h1 class="text-4xl font-bold text-red-600 mb-8" style="font-family: 'Montserrat', sans-serif;">Our Facilities</h1>
+
+    <!-- Introduction Paragraph -->
+    <div class="mb-12 text-center">
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            At DoBu Martial Arts, we take pride in providing a comprehensive training environment equipped with everything you need to reach your goals. Our facilities are designed with your comfort, safety, and performance in mind.
+        </p>
+    </div>
+
+    <!-- Facility 1: Large, Matted Martial Arts Area -->
+    <div class="mb-6">
+        <div class="flex flex-col items-center bg-black text-white p-6 rounded-lg shadow-md cursor-pointer" onclick="toggleFacility('facility1')">
+            <h2 class="text-xl font-semibold mb-4">Large, Matted Martial Arts Area</h2>
+            <!-- Image updated for larger size and responsiveness -->
+            <div class="w-full md:w-3/4 lg:w-1/2 h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-lg mb-4" style="background-image: url('mat\ area.jpg');"></div>
+            <svg id="arrow-facility1" class="toggle-arrow w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div id="facility1" class="hidden bg-gray-100 text-black p-4 rounded-b-lg">
+            <p>Our spacious martial arts area is fully matted with high-quality, shock-absorbent flooring. This provides a safe training surface ideal for a range of martial arts, including Jiu-Jitsu, Karate, Judo, and Muay Thai. The large space allows multiple classes to run simultaneously, with ample room for movement, sparring, and practicing techniques in a safe, controlled environment.</p>
+        </div>
+    </div>
+
+    <!-- Facility 2: Fully-Equipped Gym -->
+    <div class="mb-6">
+        <div class="flex flex-col items-center bg-black text-white p-6 rounded-lg shadow-md cursor-pointer" onclick="toggleFacility('facility2')">
+            <h2 class="text-xl font-semibold mb-4">Fully-Equipped Gym</h2>
+            <!-- Image updated for larger size and responsiveness -->
+            <div class="w-full md:w-3/4 lg:w-1/2 h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-lg mb-4" style="background-image: url('gym.jpg');"></div>
+            <svg id="arrow-facility2" class="toggle-arrow w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div id="facility2" class="hidden bg-gray-100 text-black p-4 rounded-b-lg">
+            <p>Our gym is stocked with a full range of equipment to support all aspects of your fitness journey. From cardio machines (like treadmills, ellipticals, and stationary bikes) to strength training equipment (including free weights, resistance machines, and cable systems), we have everything you need to build endurance, strength, and flexibility. Our gym is accessible to members at all levels, whether you’re looking to supplement your martial arts training or focus on general fitness.</p>
+        </div>
+    </div>
+
+    <!-- Facility 3: Sauna & Steam Room -->
+    <div class="mb-6">
+        <div class="flex flex-col items-center bg-black text-white p-6 rounded-lg shadow-md cursor-pointer" onclick="toggleFacility('facility3')">
+            <h2 class="text-xl font-semibold mb-4">Sauna & Steam Room</h2>
+            <!-- Image updated for larger size and responsiveness -->
+            <div class="w-full md:w-3/4 lg:w-1/2 h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-lg mb-4" style="background-image: url('steam\ room.jpeg');"></div>
+            <svg id="arrow-facility3" class="toggle-arrow w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div id="facility3" class="hidden bg-gray-100 text-black p-4 rounded-b-lg">
+            <p>We offer both sauna and steam room facilities to help you relax, recover, and rejuvenate after a workout or class. The sauna provides a dry-heat environment to help with muscle relaxation and detoxification, while the steam room offers a moist heat that is excellent for skin health and respiratory benefits. Both are perfect options for unwinding and easing muscle tension, promoting better recovery.</p>
+        </div>
+    </div>
+
+    <!-- Facility 4: Changing & Shower Facilities -->
+    <div class="mb-6">
+        <div class="flex flex-col items-center bg-black text-white p-6 rounded-lg shadow-md cursor-pointer" onclick="toggleFacility('facility4')">
+            <h2 class="text-xl font-semibold mb-4">Changing & Shower Facilities</h2>
+            <!-- Image updated for larger size and responsiveness -->
+            <div class="w-full md:w-3/4 lg:w-1/2 h-64 md:h-80 lg:h-96 bg-cover bg-center rounded-lg mb-4" style="background-image: url('changing\ room.jpg');"></div>
+            <svg id="arrow-facility4" class="toggle-arrow w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </div>
+        <div id="facility4" class="hidden bg-gray-100 text-black p-4 rounded-b-lg">
+            <p>Our clean, well-maintained changing rooms offer secure lockers, spacious changing areas, and shower facilities for your convenience. These amenities allow you to freshen up after your training sessions, with showers stocked with essential toiletries and hair dryers to ensure you leave the gym feeling refreshed. Our changing rooms are regularly sanitized to maintain a high standard of cleanliness and hygiene for all members.</p>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Toggle Functionality -->
+<script>
+    function toggleFacility(id) {
+        const content = document.getElementById(id);
+        const arrow = document.getElementById(`arrow-${id}`);
+
+        content.classList.toggle('hidden');
+        arrow.classList.toggle('rotate-180');
+    }
+</script>
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-black text-white p-8 mt-12 border-t-4 border-red-500">
+    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+        
+        <!-- Mini Navigation -->
+        <div>
+            <h3 class="text-lg font-bold mb-4">Mini Navigation</h3>
+            <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+                <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+                <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+                <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+                <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+                <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+                <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0">
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2"> 
+                <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Submit</button>
+            </form>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0 space-y-4">
+            <h3 class="text-lg font-bold mb-4">Find Us</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linked.png" alt="LinkedIn" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scroll-to-Top Button -->
+<button id="scroll-to-top" class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white p-4 rounded-full hover:bg-red-600 text-2xl">
+    ↑
+</button>
+
+<script>
+    // Show or hide the scroll-to-top button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scroll-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+
+</body>
+</html>

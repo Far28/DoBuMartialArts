@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts - Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body class="bg-white text-black">
+
+<!-- Header -->
+<header class="bg-black text-white flex justify-between items-center p-4">
+    <div class="mr-auto">
+        <img src="logo.png" alt="DoBu Martial Arts Logo" class="w-16 h-16 lg:w-20 lg:h-20">
+    </div>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex mx-auto">
+        <ul class="flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+            <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+            <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+            <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+            <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+            <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Join Now Button for Desktop -->
+    <div class="hidden lg:block ml-auto">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="lg:hidden hidden bg-black text-white p-4">
+    <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+        <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+        <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+        <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+        <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+        <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+    </ul>
+    <!-- Join Now Button for Mobile -->
+    <div class="mt-4">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Classes Section -->
+<div class="mt-12 px-4">
+    <h2 class="text-center text-4xl font-bold text-red-600 mb-8" style="font-family: 'Montserrat', sans-serif;">Our Martial Arts Classes</h2>
+
+    <!-- Jiu-Jitsu Class -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 transform hover:scale-105 transition-transform duration-300">
+        <img src="Jiu Jitsu.jpg" alt="Jiu-Jitsu" class="w-full md:w-1/2 rounded-lg">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-bold text-red-600 mb-2">Jiu-Jitsu</h3>
+            <p>Jiu-Jitsu is a grappling-based martial art focused on ground fighting and submission techniques. At DoBu Martial Arts, our Jiu-Jitsu classes teach students how to leverage technique and body mechanics over brute strength, making it an ideal discipline for self-defense. Our classes are structured to cater to all skill levels, from beginners looking to learn basic techniques to advanced practitioners honing their skills. Practicing Jiu-Jitsu improves physical fitness, flexibility, and mental resilience, helping you stay calm and strategic under pressure.</p>
+            <a href="contact.html" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Karate Class -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row-reverse items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 transform hover:scale-105 transition-transform duration-300">
+        <img src="karate.jpg" alt="Karate" class="w-full md:w-1/2 rounded-lg">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-bold text-red-600 mb-2">Karate</h3>
+            <p>Karate is a striking martial art that emphasizes powerful punches, kicks, and disciplined movement. Rooted in traditional Japanese techniques, our Karate classes at DoBu Martial Arts focus on developing strength, agility, and discipline. Through consistent training, students learn precise techniques and gain increased self-confidence and focus. Our Karate program is ideal for anyone interested in building their self-defense skills, enhancing coordination, and fostering a strong mental and physical foundation.</p>
+            <a href="contact.html" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Judo Class -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 transform hover:scale-105 transition-transform duration-300">
+        <img src="judo.jpg" alt="Judo" class="w-full md:w-1/2 rounded-lg">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-bold text-red-600 mb-2">Judo</h3>
+            <p>Judo is a martial art that emphasizes throws, joint locks, and ground control, making it an excellent discipline for close-range self-defense. Originally derived from Jiu-Jitsu, Judo relies on balance, leverage, and technique to unbalance an opponent and bring them to the ground. Our Judo classes at DoBu Martial Arts teach effective techniques in a safe and controlled environment. Practicing Judo enhances physical conditioning, flexibility, and strategic thinking, helping students build confidence and body control both on and off the mat.</p>
+            <a href="contact.html" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition">Join Now</a>
+        </div>
+    </div>
+
+    <!-- Muay Thai Class -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row-reverse items-center space-y-4 md:space-y-0 md:space-x-6 mb-8 transform hover:scale-105 transition-transform duration-300">
+        <img src="Muay thai.jpg" alt="Muay Thai" class="w-full md:w-1/2 rounded-lg">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-bold text-red-600 mb-2">Muay Thai</h3>
+            <p>Muay Thai, often referred to as "The Art of Eight Limbs," is a striking martial art from Thailand that utilizes punches, kicks, elbows, and knee strikes. Known for its powerful and effective techniques, Muay Thai is an intense, high-energy discipline that builds stamina, strength, and cardiovascular fitness. Our Muay Thai classes at DoBu Martial Arts offer a full-body workout and teach essential self-defense skills. Suitable for all fitness levels, Muay Thai training helps students develop endurance, coordination, and the mental toughness to push through challenges.</p>
+            <a href="contact.html" class="mt-4 inline-block bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition">Join Now</a>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-8 mt-12 border-t-4 border-red-500">
+        <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+            
+            <!-- Mini Navigation -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Mini Navigation</h3>
+                <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
+                    <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                    <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+                    <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+                    <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+                    <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+                    <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+                    <li><a href="faclities.html" class="hover:text-red-500">Facilities</a></li>
+                    <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Us Form -->
+            <div class="flex flex-col items-center md:items-start mt-4 md:mt-0">
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2"> 
+                    <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black">
+                    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Submit</button>
+                </form>
+            </div>
+    
+            <!-- Social Media Icons -->
+            <div class="flex flex-col items-center md:items-start mt-4 md:mt-0 space-y-4">
+                <h3 class="text-lg font-bold mb-4">Find Us</h3>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="instagram.png" alt="Instagram" class="w-8 h-8 hover:opacity-75"> 
+                    </a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="facebook.png" alt="Facebook" class="w-8 h-8 hover:opacity-75"> 
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <img src="linked.png" alt="LinkedIn" class="w-8 h-8 hover:opacity-75"> 
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </footer>
+    
+<!-- Scroll-to-Top Button -->
+<button id="scroll-to-top" class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white p-4 rounded-full hover:bg-red-600 text-2xl">
+    ↑
+</button>
+
+<script>
+    // Show or hide the scroll-to-top button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scroll-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+
+
+</body>
+</html>

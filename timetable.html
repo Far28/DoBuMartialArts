@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body class="bg-gray-100 text-black" style="background-color: #d1d5db;">
+
+<!-- Header -->
+<header class="bg-black text-white flex justify-between items-center p-4">
+    <div class="mr-auto">
+        <img src="logo.png" alt="DoBu Martial Arts Logo" class="w-16 h-16 lg:w-20 lg:h-20">
+    </div>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex mx-auto">
+        <ul class="flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+            <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+            <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+            <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+            <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+            <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Join Now Button for Desktop -->
+    <div class="hidden lg:block ml-auto">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="lg:hidden hidden bg-black text-white p-4">
+    <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+        <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+        <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+        <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+        <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+        <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+    </ul>
+    <!-- Join Now Button for Mobile -->
+    <div class="mt-4">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+<!-- Schedule Heading -->
+<div class="flex justify-center mt-8">
+    <h2 class="text-3xl font-bold text-red-600 mb-4">Schedule for Classes</h2>
+</div>
+
+<!-- Timetable Table -->
+<div class="overflow-x-auto">
+    <table class="table-auto w-full border-collapse bg-black text-white">
+        <thead>
+            <tr>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Time</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Monday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Tuesday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Wednesday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Thursday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Friday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Saturday</th>
+                <th class="border-2 border-red-500 px-4 py-2 text-center bg-red-500">Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">06:00 - 07:30</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Karate</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">08:00 - 10:00</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Karate</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">10:30 - 12:00</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Karate</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">13:00 - 14:30</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Open mat/ personal practice</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Open mat/ personal practice</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Open mat/ personal practice</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Open mat/ personal practice</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Open mat/ personal practice</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">15:00 - 17:00</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids karate</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Kids judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">17:30 - 19:00</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Karate</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Muay Thai</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+            </tr>
+            <tr>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">19:00 - 21:00</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Judo</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Jiu-jitsu</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Karate</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+                <td class="border-2 border-red-500 px-4 py-2 text-center">Private tuition</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!-- CTA Button for Membership Options -->
+<div class="flex justify-center mt-8">
+    <a href="membership.html" class="bg-red-600 text-white py-2 px-6 rounded-lg text-lg hover:bg-red-500 transition duration-300">
+        View Membership Options
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-black text-white p-8 mt-12 border-t-4 border-red-500">
+    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+        
+        <!-- Mini Navigation -->
+        <div>
+            <h3 class="text-lg font-bold mb-4">Mini Navigation</h3>
+            <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+                <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+                <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+                <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+                <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+                <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0">
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2"> 
+                <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Submit</button>
+            </form>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0 space-y-4">
+            <h3 class="text-lg font-bold mb-4">Find Us</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linked.png" alt="LinkedIn" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- Scroll-to-Top Button -->
+<button id="scroll-to-top" class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white p-4 rounded-full hover:bg-red-600 text-2xl">
+    ↑
+</button>
+
+<script>
+    // Show or hide the scroll-to-top button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scroll-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts - Trainers</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-100 text-black">
+
+<!-- Header -->
+<header class="bg-black text-white flex justify-between items-center p-4">
+    <div class="mr-auto">
+        <img src="logo.png" alt="DoBu Martial Arts Logo" class="w-16 h-16 lg:w-20 lg:h-20">
+    </div>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex mx-auto">
+        <ul class="flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+            <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+            <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+            <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+            <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+            <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Join Now Button for Desktop -->
+    <div class="hidden lg:block ml-auto">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="lg:hidden hidden bg-black text-white p-4">
+    <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+        <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+        <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+        <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+        <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+        <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+    </ul>
+    <!-- Join Now Button for Mobile -->
+    <div class="mt-4">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<!-- Trainers Section -->
+<div class="mt-12 px-4 flex flex-col items-center relative">
+    <!-- Background Image with Blur -->
+    <div class="absolute inset-0 bg-cover bg-center bg-blur" style="background-image: url('trainers\ bg.jpg'); filter: blur(8px); z-index: -1;"></div>
+    
+    <h2 class="text-center text-4xl font-bold text-red-600 mb-8" style="font-family: 'Montserrat', sans-serif;">Meet Our Trainers</h2>
+
+    <div class="space-y-8">
+        <!-- Trainer 1 -->
+        <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+            <img src="mauricio.jpeg" alt="Mauricio Gomez" class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-32 lg:h-32 rounded-full">
+            <div class="text-left md:ml-6">
+                <h3 class="text-2xl font-bold text-red-600">Mauricio Gomez (Gym Owner/Head Martial Arts Coach)</h3>
+                <ul class="list-disc ml-5">
+                    <li>Specializes in multi-disciplinary martial arts training, with extensive knowledge across Judo, Jiu-Jitsu, Karate, and Muay Thai.</li>
+                    <li>Holds a 4th Dan Blackbelt in Judo, showcasing advanced expertise and a commitment to traditional techniques.</li>
+                    <li>3rd Dan Blackbelt in Jiu-Jitsu, skilled in grappling and ground fighting strategies.</li>
+                    <li>1st Dan Blackbelt in Karate, focusing on striking techniques and traditional forms.</li>
+                    <li>Accredited Muay Thai coach with a deep understanding of powerful striking and clinching techniques.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row-reverse items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+            <img src="sara nova.jpg" alt="Sarah Nova" class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-32 lg:h-32 rounded-full">
+            <div class="text-left md:mr-6">
+                <h3 class="text-2xl font-bold text-red-600">Sarah Nova (Assistant Martial Arts Coach)</h3>
+                <ul class="list-disc ml-5">
+                    <li>Holds a prestigious 5th Dan belt in Karate, representing years of dedication to the discipline.</li>
+                    <li>Specialized in advanced Karate techniques, including precision striking, self-defense, and kata (formalized sequences of movements).</li>
+                    <li>Skilled in teaching all levels, with a focus on fostering confidence and discipline in beginners.</li>
+                    <li>Brings a methodical approach to coaching, emphasizing proper form, technique, and the mental aspects of martial arts.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+            <img src="Guy victory.jpg" alt="Guy Victory" class="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-32 lg:h-32 rounded-full">
+            <div class="text-left md:ml-6">
+                <h3 class="text-2xl font-bold text-red-600">Guy Victory (Assistant Martial arts Coach)</h3>
+                <ul class="list-disc ml-5">
+                    <li>2nd Dan Blackbelt in Jiu-Jitsu, with expertise in grappling, joint locks, and submissions.</li>
+                    <li>1st Dan Blackbelt in Judo, skilled in throws and takedowns, complementing his Jiu-Jitsu experience.</li>
+                    <li>Focuses on combining Judo and Jiu-Jitsu for a well-rounded approach to self-defense and competitive martial arts.</li>
+                    <li>Passionate about teaching practical applications, helping students develop skills they can use in real-life scenarios.</li>
+                </ul>
+            </div>
+        </div>
+
+       <!-- Trainer 4 -->
+       <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row-reverse items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+        <img src="morris.jpg" alt="Morris Davis" class="w-28 h-28 md:w-32 md:h-32 rounded-full">
+        <div class="text-left md:mr-6">
+            <h3 class="text-2xl font-bold text-red-600">Morris Davis (Assistant Martial Arts Coach)</h3>
+            <ul class="list-disc ml-5">
+                <li>Accredited Muay Thai coach, specializing in powerful striking techniques, including kicks, punches, and knee strikes.</li>
+                <li>3rd Dan Blackbelt in Karate, with a strong foundation in self-discipline and traditional martial arts principles.</li>
+                <li>Known for high-intensity training sessions that improve endurance, power, and agility.</li>
+                <li>Encourages a balanced approach, combining the fluidity of Muay Thai with the structure of Karate for effective self-defense skills.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Trainer 5 -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+        <img src="Traci.png" alt="Traci Santiago" class="w-28 h-28 md:w-32 md:h-32 rounded-full">
+        <div class="text-left md:ml-6">
+            <h3 class="text-2xl font-bold text-red-600">Traci Santiago (Fitness Coach)</h3>
+            <ul class="list-disc ml-5">
+                <li>BSc in Sports Science, providing a solid scientific background in fitness and body mechanics.</li>
+                <li>Qualified in health and nutrition, with a specialization in diet plans that support martial arts training and athletic performance.</li>
+                <li>Expertise in creating strength and conditioning programs tailored to combat athletes, focusing on core stability, strength, and injury prevention.</li>
+                <li>Works closely with martial arts coaches to ensure fitness routines complement the students’ training, enhancing overall performance.</li>
+            </ul>
+    </div>
+</div>
+
+    <!-- Trainer 6 -->
+    <div class="bg-black text-white p-6 rounded-lg shadow-md border-2 border-red-600 flex flex-col md:flex-row-reverse items-center md:items-start md:space-x-6 transform hover:scale-105 transition-transform duration-300 max-w-3xl mx-auto">
+        <img src="Harpreet Kaur.jpg" alt="Harpreet Kaur" class="w-28 h-28 md:w-32 md:h-32 rounded-full">
+        <div class="text-left md:mr-6">
+            <h3 class="text-2xl font-bold text-red-600">Harpreet Kaur (Fitness Coach)</h3>
+            <ul class="list-disc ml-5">
+                <li>BSc in Physiotherapy and MSc in Sports Science, providing in-depth knowledge of anatomy, biomechanics, and injury rehabilitation.</li>
+                <li>Specializes in recovery programs and injury prevention techniques for martial artists, keeping students safe and resilient.</li>
+                <li>Designs personalized training routines that accommodate physical limitations and promote gradual progression.</li>
+                <li>Emphasizes flexibility, mobility, and proper body mechanics, which are essential for martial arts performance.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="bg-black text-white p-8 mt-12 border-t-4 border-red-500">
+    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+        
+        <!-- Mini Navigation -->
+        <div>
+            <h3 class="text-lg font-bold mb-4">Mini Navigation</h3>
+            <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+                <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+                <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+                <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+                <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+                <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0">
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2"> 
+                <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Submit</button>
+            </form>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0 space-y-4">
+            <h3 class="text-lg font-bold mb-4">Find Us</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linked.png" alt="LinkedIn" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scroll-to-Top Button -->
+<button id="scroll-to-top" class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white p-4 rounded-full hover:bg-red-600 text-2xl">
+    ↑
+</button>
+
+<script>
+    // Show or hide the scroll-to-top button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scroll-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+</body>
+</html>

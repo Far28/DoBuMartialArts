@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoBu Martial Arts - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-500 text-black"> <!-- Changed to red for visibility -->
+
+    <div class="min-h-screen flex flex-col"> <!-- Added flex-col to make footer stick to bottom -->
+<!-- Header -->
+<header class="bg-black text-white flex justify-between items-center p-4">
+    <div class="mr-auto">
+        <img src="logo.png" alt="DoBu Martial Arts Logo" class="w-16 h-16 lg:w-20 lg:h-20">
+    </div>
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex mx-auto">
+        <ul class="flex space-x-6 text-white">
+            <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+            <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+            <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+            <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+            <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+            <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+            <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+            <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="lg:hidden ml-auto">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Join Now Button for Desktop -->
+    <div class="hidden lg:block ml-auto">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav id="mobile-menu" class="lg:hidden hidden bg-black text-white p-4">
+    <ul class="space-y-4">
+        <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+        <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+        <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+        <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+        <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+        <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+        <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+        <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+    </ul>
+    <!-- Join Now Button for Mobile -->
+    <div class="mt-4">
+        <a href="contact.html">
+            <button class="bg-red-500 text-white w-full py-2 rounded hover:bg-red-600">
+                Join Now
+            </button>
+        </a>
+    </div>
+</nav>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+<!-- Main About Section -->
+<section class="bg-cover bg-center py-12 px-6 md:px-12 lg:px-24 text-center text-gray-800" style="background-image: url('bgabt.jpg'); background-size: cover;">
+    <div class="relative bg-white bg-opacity-80 rounded-lg shadow-lg p-8 animate-box">
+        <h2 class="text-4xl font-bold text-red-600 mb-8" style="font-family: 'Montserrat', sans-serif;">
+            About DoBu Martial Arts
+        </h2>
+
+        <p class="text-lg mb-6">
+            Welcome to DoBu Martial Arts, where tradition meets modern training to cultivate strength, discipline, and community. At DoBu, we are dedicated to offering a comprehensive approach to martial arts, combining ancient techniques with contemporary methods to create a unique training experience. Our gym provides a range of martial arts disciplines, including Jiu-Jitsu, Karate, Judo, and Muay Thai, each designed to help individuals of all skill levels achieve their personal fitness and self-defense goals.
+
+            <p class="text-lg">
+                Founded with a passion for martial arts and a commitment to empowering individuals, DoBu Martial Arts has grown into a vibrant community of learners, trainers, and enthusiasts. Our mission is not only to teach martial arts techniques but also to instill values of respect, perseverance, and mental resilience in our members. We believe that martial arts is more than just physical training—it’s a path toward personal growth and lifelong well-being.
+            </p>
+    </div>
+
+<!-- Why Join Us Section -->
+<section class="bg-black text-white py-12 px-6 md:px-12 lg:px-24 text-center">
+    <h3 class="text-3xl font-bold text-red-600 mb-8" style="font-family: 'Montserrat', sans-serif;">
+        Why Join Us?
+    </h3>
+
+    <div class="space-y-6 max-w-3xl mx-auto text-left text-lg">
+        <div class="bg-black text-white p-6 rounded-lg border-2 border-red-600">
+            <p><span class="font-bold text-xl text-white">Expert Trainers:</span> Our team of highly qualified and experienced trainers is dedicated to helping each member reach their potential. They bring years of experience and a deep understanding of martial arts, ensuring that each class is both challenging and accessible.</p>
+        </div>
+        
+        <div class="bg-black text-white p-6 rounded-lg border-2 border-red-600">
+            <p><span class="font-bold text-xl text-white">Wide Range of Classes:</span> We offer a diverse selection of classes, from beginner-friendly sessions to advanced techniques, ensuring that there’s something for everyone. Whether you’re interested in self-defense, fitness, or mastering a specific martial art, our program covers all bases.</p>
+        </div>
+        
+        <div class="bg-black text-white p-6 rounded-lg border-2 border-red-600">
+            <p><span class="font-bold text-xl text-white">Community Atmosphere:</span> At DoBu Martial Arts, you’re more than just a member; you’re part of a community. Our gym fosters a supportive environment where members encourage and inspire one another, making the training journey enjoyable and rewarding.</p>
+        </div>
+        
+        <div class="bg-black text-white p-6 rounded-lg border-2 border-red-600">
+            <p><span class="font-bold text-xl text-white">Holistic Development:</span> Our programs are designed to cultivate both physical and mental strength. Through our training, you’ll improve not only your martial arts skills but also your discipline, confidence, and focus—qualities that benefit you both on and off the mat.</p>
+        </div>
+    </div>
+
+    <p class="text-lg mt-8 max-w-3xl mx-auto">
+        Joining DoBu Martial Arts is more than enrolling in a gym; it’s a step toward a stronger, healthier, and more empowered you. We welcome individuals of all ages and backgrounds to start their martial arts journey with us and experience the transformative power of martial arts training.
+    </p>
+</section>
+    
+<!-- About Us Image Section -->
+<div class="flex justify-center my-12">
+    <img src="aboutus.png" alt="About Us" class="w-full max-w-4xl h-auto rounded-lg border-4 border-red-600 shadow-lg transition duration-300 transform hover:scale-105 hover:shadow-xl" style="border-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 255, 255, 0.5)); border-image-slice: 1;">
+</div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-black text-white p-8 mt-12 border-t-4 border-red-500">
+    <div class="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+        
+        <!-- Mini Navigation -->
+        <div>
+            <h3 class="text-lg font-bold mb-4">Mini Navigation</h3>
+            <ul class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-4">
+                <li><a href="index.html" class="hover:text-red-500">Home</a></li>
+                <li><a href="about.html" class="hover:text-red-500">About Us</a></li>
+                <li><a href="classes.html" class="hover:text-red-500">Classes</a></li>
+                <li><a href="timetable.html" class="hover:text-red-500">Timetable</a></li>
+                <li><a href="trainers.html" class="hover:text-red-500">Trainers</a></li>
+                <li><a href="membership.html" class="hover:text-red-500">Membership</a></li>
+                <li><a href="facilities.html" class="hover:text-red-500">Facilities</a></li>
+                <li><a href="contact.html" class="hover:text-red-500">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Us Form -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0">
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <form class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2"> 
+                <input type="email" placeholder="Your Email" class="px-4 py-2 rounded text-black">
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Submit</button>
+            </form>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex flex-col items-center md:items-start mt-4 md:mt-0 space-y-4">
+            <h3 class="text-lg font-bold mb-4">Find Us</h3>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="instagram.png" alt="Instagram" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="facebook.png" alt="Facebook" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="linked.png" alt="LinkedIn" class="w-8 h-8 hover:opacity-75"> 
+                </a>
+            </div>
+        </div>
+
+    </div>
+</footeR>
+<!-- Scroll-to-Top Button -->
+<button id="scroll-to-top" class="hidden fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-red-500 text-white p-4 rounded-full hover:bg-red-600 text-2xl">
+    ↑
+</button>
+
+<script>
+    // Show or hide the scroll-to-top button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scroll-to-top').fadeIn();
+        } else {
+            $('#scroll-to-top').fadeOut();
+        }
+    });
+
+    // Scroll to top when the button is clicked
+    $('#scroll-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+
+</body>
+</html>
